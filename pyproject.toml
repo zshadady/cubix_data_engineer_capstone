@@ -31,6 +31,6 @@ addopts = "--disable-warnings -p no:warnings"
 dev = [
     "pytest (^8.3.4)",
     "pyarrow (^19.0.0)",
-    "pre-commit (^4.0.1)"
+    "pre-commit (^4.0.1)",
     "pandas (^2.2.3)"
 ]
