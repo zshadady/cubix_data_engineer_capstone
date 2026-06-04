@@ -29,8 +29,8 @@ addopts = "--disable-warnings -p no:warnings"
 
 [dependency-groups]
 dev = [
-    "pytest (^8.3.4)",
-    "pyarrow (^19.0.0)",
-    "pre-commit (^4.0.1)",
-    "pandas (^2.2.3)"
+    "pytest (>8.3.3,<8.3.5)",
+    "pyarrow (>=19.0.0,<19.0.1)",
+    "pre-commit (>=4.0.1,<4.0.2)",
+    "pandas (>=2.2.3,<2.2.4)"
 ]
