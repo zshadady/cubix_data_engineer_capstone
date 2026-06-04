@@ -12,6 +12,9 @@ dependencies = [
     "numpy (>=1,<2)"
 ]
 
+[project.optional-dependencies]
+delta = ["delta-spark>=3.3.0"]
+
 [tool.poetry]
 packages = [{include = "cubix_data_engineer_capstone", from = "src"}]
 
@@ -19,8 +22,15 @@ packages = [{include = "cubix_data_engineer_capstone", from = "src"}]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.pytest.ini_options]
+testpaths = ["./tests"]
+filterwarings = ["ignore:DeprecationWarning"]
+addopts = "--disable-warnings -p no:warnings"
+
 [dependency-groups]
 dev = [
-    "pytest (>=9.0.3,<10.0.0)",
-    "pyarrow (>=24.0.0,<25.0.0)"
+    "pytest (^8.3.4)",
+    "pyarrow (^19.0.0)",
+    "pre-commit (^4.0.1)"
+    "pandas (^2.2.3)"
 ]
