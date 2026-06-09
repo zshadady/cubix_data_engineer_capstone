@@ -8,6 +8,7 @@ SPARK = (
     .master("local")
     .appName("localTests")
     .getOrCreate()
+    
 )
 
 
